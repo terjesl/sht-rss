@@ -24,7 +24,7 @@ jobs:
         run: python build_sht_rss.py
 
       - name: Upload RSS via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v2
+        uses: SamKirkland/FTP-Deploy-Action@v4.1.0
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
