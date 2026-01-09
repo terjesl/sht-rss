@@ -25,15 +25,12 @@ jobs:
 
       - name: Upload RSS via FTP
   uses: SamKirkland/FTP-Deploy-Action@v4.1.0
-  with:
-    server: ${{ secrets.FTP_HOST }}
-    username: ${{ secrets.FTP_USER }}
-    password: ${{ secrets.FTP_PASS }}
-    protocol: sftp
-    port: 22
-    local-dir: ./
-    server-dir: /www/rss/
-    exclude: |
-      **
-      !sht-fiske.xml
+with:
+  server: ${{ secrets.FTP_HOST }}
+  username: ${{ secrets.FTP_USER }}
+  password: ${{ secrets.FTP_PASS }}
+  local-dir: ./
+  server-dir: /www/rss/
+  include:
+    sht-fiske.xml
 
