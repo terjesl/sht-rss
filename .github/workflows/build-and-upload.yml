@@ -1,15 +1,13 @@
-.github/workflows/build-and-upload.yml
 name: Build and upload SHT RSS
 
 on:
   schedule:
-    - cron: "0 */6 * * *"   # kjør hver 6. time
-  workflow_dispatch:        # mulig å kjøre manuelt
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
