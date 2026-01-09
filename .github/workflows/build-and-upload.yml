@@ -31,6 +31,3 @@ with:
   password: ${{ secrets.FTP_PASS }}
   local-dir: ./
   server-dir: /www/rss/
-  include:
-    sht-fiske.xml
-
