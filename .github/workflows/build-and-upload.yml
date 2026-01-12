@@ -1,3 +1,4 @@
+# trigger refresh
 name: Build and upload SHT RSS
 
 on:
