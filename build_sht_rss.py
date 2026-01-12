@@ -66,7 +66,7 @@ def main():
         dt = parse_dotnet_date(row.get("IncidentDate") or "")
         pub_date = format_datetime(dt) if dt else now
 
-        rss_title = f"[{item2}] {title}"
+        rss_title = title
 
         desc = f"Type fartøy: {item2}"
         if vessel_name:
@@ -103,3 +103,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
