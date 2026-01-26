@@ -23,13 +23,12 @@ jobs:
       - name: Build RSS
         run: python build_sht_rss.py
 
-    - name: Upload RSS via FTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ftp.domeneshop.no
-        username: ${{ secrets.FTP_USER }}
-        password: ${{ secrets.FTP_PASS }}
-        port: 21
-        protocol: ftp
-        server-dir: /www/
-
+      - name: Upload RSS via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ftp.domeneshop.no
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          port: 21
+          protocol: ftp
+          server-dir: /www/
