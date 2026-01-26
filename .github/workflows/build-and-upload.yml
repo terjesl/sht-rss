@@ -25,9 +25,10 @@ jobs:
 
       - name: Upload RSS via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_HOST }}
+       with:
+          server: sftp.domeneshop.no
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          local-dir: ./
+          port: 22
+          protocol: sftp
           server-dir: /www/
